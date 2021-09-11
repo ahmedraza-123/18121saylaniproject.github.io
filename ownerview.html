@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Report</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    
+</head>
+<body>
+
+    
+
+
+    <form action="/action_page.php">
+        <fieldset style="height: 800px; width: 1000px; margin-left: 180px;" >
+         <legend><b style="font-size: large;">Team / Owner View</b>:</legend>
+<div style="height: 2px; background-color: gainsboro;">
+
+</div>
+
+<p  style="word-spacing: 130px; margin-left: 40px;">Reports
+    Settings
+</p>
+<div style="height:  2px;  background-color: gainsboro;">
+<div style="height: 2px; margin-left: 20px; width: 120px; background-color: orangered;">
+    
+</div>
+</div>
+<br>
+        <select style=" width: 130px; height: 30px; margin-right: 630px;">
+            <option style="border: black;">All Members</option>
+        </select>
+        <input type="date" style="height: 30px; ;">
+
+        <br><br>
+       
+        <p>Haris:16 Aug</p>
+        <div style="margin-left: 40px;">
+        <p>Q. What did you do today?</p>
+        <p>A. Nothing</p>
+        <p>Q. What will you do tomorrow?</p>
+        <p>A. Nothing</p>
+        <p>Q. Are There Any Blockers on Your Way?</p>
+        <p>A. No</p>
+
+
+</div>
+<br>
+<p>Arshad:16 Aug </p>
+
+<div style="margin-left: 40px;">
+    <!-- <p>Q. What did you do today?</p> -->
+    <b>Question:</b> <span id="question1"></span><br><br>
+    <b>Answer:</b> <span id="answer1"></span><br><br>
+    <b>Question:</b> <span id="question2"></span><br><br>
+    <b>Answer:</b><span id="answer2"></span><br><br>
+    <b>Question:</b> <span id="question3"></span><br><br>
+    <b>Answer:</b><span id="answer3"></span>
+</div>
+<script>
+    document.getElementById("question1").innerHTML=localStorage.getItem("Question1");  
+  document.getElementById("question2").innerHTML=localStorage.getItem("Question2");
+  document.getElementById("question3").innerHTML=localStorage.getItem("Question3");
+   document.getElementById("answer1").innerHTML=localStorage.getItem("Answer1");
+    document.getElementById("answer2").innerHTML=localStorage.getItem("Answer2");
+    document.getElementById("answer3").innerHTML=localStorage.getItem("Answer3");
+   
+   
+
+
+</script>
+ 
+<br><br>
+
+<button    style="color: white; font-size: large; margin-left: 0px; background-color: blue; outline: none; border: white; height: 50px; width: 200px;"><a href="index.html" style="color: white;">Go Back To Main Page</a></button>
+
+
+       <br> </fieldset>
+       </form>
+    <img  src="https://i.pinimg.com/originals/79/33/6b/79336b5589d0fe97acba63ac31c26d26.gif" alt="funny GIF" width="10%" height="20%">
+      
+    </body>
+    </html>
+    

@@ -1,0 +1,126 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    *{
+    margin: 0;
+  padding: 0;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+
+background-position: center;
+position: relative;
+overflow: hidden;
+}
+.runway{
+    height: 200px;
+    width: 100%;
+    background: transparent;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+.airplane{
+    width: 500px;
+    position: absolute;
+    bottom: 150px;
+    right: -200px;
+    animation: plane 4s linear infinite;
+transform-origin: 100% 50%;
+}
+@keyframes plane{
+    0%{
+        transform: translateX(0px) translateY(0px) rotate(0deg);
+    }
+    30%{
+        transform: translateX(-500px) translateY(0px) rotate(0deg);
+    }
+    100%{
+        transform: translateX(-1500px) translateY(-200px) rotate(20deg);
+    }
+}
+
+
+
+</style>
+
+    <script>
+            var name=document.getElementById("fname").value;
+     var email=document.getElementById("ename").value;
+     var password =document.getElementById("pwdname").value;
+     function SignUp(){
+     
+        //    if(fname.length < 0){            //||Email==""||Password==""){
+        //        alert("please fill all requirement");
+        //    }
+        if((document.getElementById('fname').value).length==0||(document.getElementById('ename').value).length==0||(document.getElementById('pwdname').value).length==0){
+            alert("please fill all requirement");
+        }
+        else{
+
+            localStorage.setItem("FullName",name)
+    localStorage.setItem("Email",ename.value)
+     localStorage.setItem("Password",pwdname.value)   
+    console.log(ename.value);
+    console.log(pwdname.value);
+     alert("Your data is saved successfully:)");
+               window.location.href="login page.html";
+           } }
+
+   
+
+
+
+// if (FullName == "") {
+//     alert("Please  all requirement must  be filled out");
+//   }
+//  else{
+//     alert('Your data is save successfully');
+//     window.location.href="login page.html";
+//         }
+    </script>
+</head>
+<body>
+  
+    <div class="container">
+        <div class="runway">
+
+        </div>
+        <img src="images/airplane.png" class="airplane">
+    
+
+
+    <form name="myForm"  action="/action_page.php">
+        <fieldset style="height: 500px; width: 1000px; margin-left: 180px;" >
+         <legend><b style="font-size: large;">Signup</b>:</legend>
+         <p style="margin-top: 120px;"></p>
+         <label style="margin-left: 350px; " >Full Name*</label><br><br>
+         <input type="text"  name="name"  style="margin-left: 350px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="fname" ><br>
+       
+         <br> <label style="margin-left: 350px;" for="ename">Email*</label><br><br>
+         <input type="email"  name="email"  style="margin-left: 350px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="ename" ><br>
+          
+       
+         <br> <label style="margin-left: 350px;" for="password">Password*</label><br><br>
+       <input type="password"  name="password"  style="margin-left: 350px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="pwdname" ><br>
+        
+<br><br><br>
+         <button type="reset" onclick="SignUp()"  style="color: white; font-size: large; margin-left: 450px; background-color: blue; outline: none; border: white; height: 50px; width: 120px; " style="color: white;">Signup</button>
+       <br> </fieldset>
+       </form>
+    <img  src="https://i.pinimg.com/originals/79/33/6b/79336b5589d0fe97acba63ac31c26d26.gif" alt="funny GIF" width="10%" height="20%">
+
+      </div>
+    </body>
+    </html>
+    

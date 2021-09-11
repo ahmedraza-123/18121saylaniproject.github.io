@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Member View</title>
+    <style>
+     #btn{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        width: 130px;
+         margin-left: 150px; 
+         word-spacing: 10px;
+    }
+    
+    
+    
+   
+
+
+    
+    </style>
+    <script>
+        function member(){
+        var Question1=document.getElementById("q1").value;
+       var Question2= document.getElementById("q2").value;
+        var Question3=document.getElementById("q3").value;
+            localStorage.setItem("Answer1",Question1);
+            localStorage.setItem("Answer2",Question2);
+            localStorage.setItem("Answer3",Question3);
+            alert("your answer is save successfully:)");
+            window.location.href="ownerview.html";}
+         
+//  document.getElementById("result1").innerHTML=localStorage.getItem("Email");
+ </script>
+</head>
+<body>
+
+   
+
+    <form action="/action_page.php">
+        <fieldset style="height: 600px; width: 1000px; margin-left: 180px;" >
+         <legend><b style="font-size: large;">Team / Member View</b>:</legend>
+         
+<br><br>
+<p style="font-size: xx-large;">Filling for:
+    <span style="font-weight: bolder; font-size: xx-large;">16 August 2021</span> 
+</p>
+<br><br>
+
+<div style="margin-left: 40px;">
+<span id="result1"></span>
+<br><br>
+<input type="text" placeholder="Answer" name="email"  style="margin-left: 0px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q1" ><br>
+<span id="result2" ></span>
+<br><br>
+<input type="text" placeholder="Answer" name="email"  style="margin-left: 0px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q2" ><br>
+<span id="result3" ></span><br><br>
+
+<input type="text" placeholder="Answer" name="email"  style="margin-left: 0px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q3" ><br>
+<br>
+<br>
+<button  type="reset"onclick="member()"   style="color: white; font-size: large; margin-left: 0px; background-color: blue; outline: none; border: white; height: 50px; width: 120px;">Submit</button>
+
+
+<script> 
+  document.getElementById("result1").innerHTML=localStorage.getItem("Question1");  
+  document.getElementById("result2").innerHTML=localStorage.getItem("Question2");
+  document.getElementById("result3").innerHTML=localStorage.getItem("Question3");
+
+  
+
+</script>
+</div>
+</fieldset>
+
+       <br> </fieldset>
+       </form>
+    <img  src="https://i.pinimg.com/originals/79/33/6b/79336b5589d0fe97acba63ac31c26d26.gif" alt="funny GIF" width="10%" height="20%">
+      
+    </body>
+    </html>
+    

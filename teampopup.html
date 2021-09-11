@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Popup Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #btn{
+            background-color: blue;
+            color: white;
+            padding: 7px;
+            text-decoration: none;
+            width: 130px;
+             margin-left: 210px; 
+             word-spacing: 10px;
+        }
+
+   
+
+
+
+
+
+    </style>
+    <script>
+       function pop(){
+       var Name=document.getElementById("name").value;
+        var Email=document.getElementById("email").value;
+        localStorage.setItem("Name",Name);
+        localStorage.setItem("Email",Email);
+    
+      if(Name==null||Email==null){
+          alert("Please fill all requirements");
+      }
+      else{
+        alert("your name and email is save successfully:)");
+        console.log(Name,Email);}
+        window.location.href="teamspage.html";
+    }
+    </script>
+</head>
+<body>
+
+    
+   
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+           
+           <fieldset  style="margin-top: 90px  ; background-color: white; height: 400px; margin-left:400px; width: 600px; position: fixed; ">
+            <h3 style="text-align: center; font-size: x-large">Create New Team</h3>
+            <br>
+
+
+         <input type="text" placeholder="Team Name"   name="email"  style="margin-left: 110px;  background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 120px;"  id="name" ><br>
+<br><br>
+
+<select style="width: 400px; height: 30px; font-weight: bold; margin-left:110px ;" >
+    <option>Category</option>
+</select>
+       <br><br><br>
+       <input type="text" placeholder="Members(type email)"   name="email"  style="margin-left: 110px;  background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 120px;"  id="email" ><br>
+       <br><br><br>
+<!-- <a href="teamspage.html"id="btn"align="center">Create</a> -->
+       <!-- <button onclick="adds()"  type="reset" style="width: 90px; margin-left: 210px; word-spacing: 10px; color: white; background-color: blue; height: 40px; border: none; ">add </button> -->
+       <button onclick="pop()"  type="reset" style="width: 90px; margin-left: 210px; word-spacing: 10px; color: white; background-color: blue; height: 40px; border: none; ">Create </button>
+
+       <button style="width: 90px;  color: white; background-color: orangered; height: 35px; border: none;">Cancel</button>
+
+
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        
+      
+
+        
+    <form action="/action_page.php">
+        <fieldset style="height: 700px; width: 1000px; margin-left: 180px;" >
+         <legend><b style="font-size: large;">Teams</b>:</legend>
+         <h2 style="text-align: center;">Teams You Own</h2>
+
+         
+
+<fieldset  style="width: 500px; margin-left: 250px;" >
+
+    <p>Developers</p>
+    
+    <p><b>Members:</b>Haris, Arshad & 1 other</p>
+
+</fieldset>
+
+<br>
+
+<fieldset  style="width: 500px; margin-left: 250px;" >
+
+    <p>Maintenance Team</p>
+    
+    <p><b>Members:</b>Haris, Faizan & 10 others</p>
+
+</fieldset>
+
+<br>
+<h2 style="text-align: center;">Teams you're part of</h2>
+
+
+
+<fieldset  style="width: 500px; margin-left: 250px;" >
+
+    <p>Leads</p>
+    
+    <p><b>Members:</b>You, Rehman & 7 others</p>
+
+</fieldset>
+
+<br>
+
+<fieldset  style="width: 500px; margin-left: 250px;" >
+
+    <p>Architects</p>
+    
+    <p ><b>Members:</b>You, Anas & 5 others</p>
+<br>
+</fieldset>
+
+
+
+<p id="p1"    style="background-color: blue; color: white; border-radius: 20px; width: 40px; height: 40px; margin-top: -30px;  margin-left: 950px; font-weight: bold;"><span style="margin-left: 13px;  margin-bottom: 4px; font-size: x-large;"><b>+</b></span></p>
+
+
+
+</fieldset>
+
+
+
+       </form>
+      
+       <img  src="https://i.pinimg.com/originals/79/33/6b/79336b5589d0fe97acba63ac31c26d26.gif" alt="funny GIF" width="10%" height="20%">
+
+       </body>
+       
+
+ 
+</body>
+
+</html>
+    

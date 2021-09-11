@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Setting</title>
+  <style>
+    #btn{
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        width: 130px;
+         margin-left: 40px; 
+         word-spacing: 10px;}
+
+         .save{
+             margin-left: 250px;
+             width: 190px;
+             height: 40px;
+             color: white;
+             background-color: orangered;
+             margin-top: 20px;
+         }
+         .save:hover{
+             background: linear-gradient(#7474bf,#348ac7);
+         }
+        </style>
+    
+</head>
+<body>
+    <form action="/action_page.php">
+        <fieldset style="height: 1000px; width: 1000px; margin-left: 180px;" >
+         <legend><b style="font-size: large;">Team / Owner View</b>:</legend>
+<div style="height: 2px;  background-color: gainsboro; margin-top: 3px;">
+
+</div>
+
+<p  style="word-spacing: 130px; margin-left: 40px; margin-top: 30px;">Reports
+    Settings
+</p>
+<div style="height:  2px;  background-color: gainsboro;">
+<div style="height: 2px; margin-left: 20px; width: 120px; background-color: orangered;">
+    
+</div>
+</div>
+<br>
+<p style="font-size: x-large; margin-left: 25px; ">Questions</p>
+
+<br>
+<input type="text" value="What did you do today?" name="email"  style="margin-left: 110px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q1" ><br>
+<br><br>
+<input type="text" value="What will you do tomorrow?" name="email"  style="margin-left: 110px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q2" ><br>
+<br>    <br>
+<input type="text" value="Are there blockers in way?" name="email"  style="margin-left: 110px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;"  id="q3" ><br>
+<br>
+<button type="reset"onclick="setting()" class="save"    >Please save the questions</button>
+<p style="font-size: x-large; margin-left: 25px; ">Reminder Time:</p>
+
+<input type="date" style="height: 30px; margin-left: 150px ;">
+
+<input type="checkbox" style="margin-left: 170px; " checked><span style="margin-left: 10px;">Exclude Weekends</span>
+<br><br>
+<p style="font-size: x-large; margin-left: 25px; ">Members:</p>
+<b>Name:</b> <span id="result" style="color: black;  font-weight: bold; border: none; background-color: black; width: 160px; height: 35px; margin-left: 8px;   color: white; font-size: large;"></span>
+<br><br>
+<b>Email:</b>  <span id="result1"style="color: black;  font-weight: bold; border: none; background-color: black; width: 160px; height: 35px; margin-left: 8px;   color: white; font-size: large;"></span>
+<!-- welcome the team member name:'' <span id="result2" style="color: black;  font-weight: bold; border: none; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; margin-left: 8px;  background-color: grey; border-radius: 14px;  color: white; font-size: large;"></span>
+welcome the team member Email: <span id="result3"style="color: black;  font-weight: bold; border: none; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; margin-left: 8px;  background-color: grey; border-radius: 14px;  color: white; font-size: large;"></span> -->
+<script>
+    function setting(){
+    var question1=document.getElementById("q1").value;
+var question2=document.getElementById("q2").value;
+var question3=document.getElementById("q3").value;
+localStorage.setItem("Question1",question1);
+localStorage.setItem("Question2",question2);
+localStorage.setItem("Question3",question3);
+console.log(question1,question2,question3);
+alert("Your question is save successfully:)")
+    }
+ document.getElementById("result").innerHTML=localStorage.getItem("Name");
+ document.getElementById("result1").innerHTML=localStorage.getItem("Email");
+var x= [];
+   
+    function chngtext(){
+        var firstname = document.getElementById('firstname').value;
+        x.push(firstname);
+   document.getElementById('firname').innerHTML = x;
+    }
+    function empty() {
+    document.getElementById("firname").innerHTML=" ";
+    }
+function cancel(){
+    window.location.href="teamspage.html";
+}
+</script>
+<br>
+<div style="margin-left: 90px; margin-bottom: 20px;">
+    <!-- <button style="color: black;  font-weight: bold; border: none; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; ">test@example.com<span style="margin-left: 8px;  background-color: grey; border-radius: 14px;  color: white; font-size: large;">&#215;</span></button>
+    <button style="color: black; margin-left: 20px; font-weight: bold; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; border: none;">test@example.com<span style="margin-left: 8px; width: 6px; background-color: grey; border-radius: 16px; color: white; font-size: large;">&#215;</span></button>
+    <button style="color: black; margin-left: 20px; font-weight: bold; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; border: none;">test@example.com<span style="margin-left: 8px; width: 6px; background-color: grey; border-radius: 16px; color: white; font-size: large;">&#215;</span></button> -->
+    </div>
+    <br>
+    <div style="margin-left: 90px; margin-bottom: 20px;">
+    <!-- <button style="color: black; font-weight: bold; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; border: none;">test@example.com<span style="margin-left: 8px; width: 6px; background-color: grey; border-radius: 16px; color: white; font-size: large;">&#215;</span></button>
+    <button style="color: black; margin-left: 20px; font-weight: bold; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; border: none;">test@example.com<span style="margin-left: 8px; width: 6px; background-color: grey; border-radius: 16px; color: white; font-size: large;">&#215;</span></button>
+    <button style="color: black; margin-left: 20px; font-weight: bold; background-color: gainsboro; border-radius: 20px; width: 160px; height: 35px; border: none;">test@example.com<span style="margin-left: 8px; width: 6px; background-color: grey; border-radius: 16px; color: white; font-size: large;">&#215;</span></button> -->
+    </div>
+
+<br><br><br><br>
+
+<input type="text" id="firstname"placeholder="Add Member" name="email"  style="margin-left: 60px; background: transparent; border: none; border-bottom: 1px solid gainsboro ; padding: 2px 100px;" ><br> 
+<ol>
+    <li id = "firname" style="display: inline-block;"> <br></li> 
+</ol>
+<br><br>
+
+<div style="margin-left: 60px;">
+    <a href="memberview.html"id="btn"align="center">Save Changes</a>
+<!-- <button style="color: white; background-color: blue; border: blue; height: 40px; width: 100px;" >Save Changes</button> -->
+<button type="reset"  onclick="cancel()"style="color: black; margin-left: 40px; border-color: black; background-color: white; height: 40px; width: 100px; " >Cancel</button>
+</div>
+
+<div style="margin-left: 490px; margin-top: -100px;">
+<button type="reset" onclick='chngtext()' style="color: white; background-color: blue; border: blue; height: 40px; width: 85px;  " >Add</button>
+<br><br>
+<button type="reset" onclick='empty()' style="color: white; background-color: orangered; border: blue; height: 40px; width: 87px;  " >Delete Team</button>
+
+</div>
+<br>
+<br><br>
+       <br> </fieldset>
+       </form>
+    <img  src="https://i.pinimg.com/originals/79/33/6b/79336b5589d0fe97acba63ac31c26d26.gif" alt="funny GIF" width="10%" height="20%">
+
+    </body>
+    </html>
